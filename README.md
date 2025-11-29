@@ -100,6 +100,13 @@ The server will start at `http://localhost:5000`.
 ![Processing Status](assets/app_screenshot_1.png)
 ![Review Result](assets/app_screenshot_2.png)
 
+### CLI Testing
+You can also run the full pipeline from the command line without starting the web server:
+```bash
+python test_workflow.py
+```
+This script will prompt you for a PDF path and display the live agent logs in your terminal.
+
 ---
 
 ## � Project Structure
