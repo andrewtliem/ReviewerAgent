@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Paper Reviewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-badge">COGITO SMART JOURNAL • AI REVIEW</div>
+            <h1 class="main-title">Prepare your manuscript for Cogito Smart Journal</h1>
+            <p class="subtitle">
+                Submit your PDF and our AI reviewer will evaluate it against Cogito’s standards—profiling the manuscript, 
+                surfacing relevant literature, and producing a structured review aligned with SINTA 2 expectations.
+            </p>
+        </header>
+
+        <div class="process-steps">
+            <div class="step" data-step="1">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Upload & Submit</h3>
+                <p class="step-description">Provide your PDF.</p>
+            </div>
+            <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Processing</h3>
+                <p class="step-description">AI analyzes your paper.</p>
+                <div class="step-timer" id="stepProcessingTimer" style="display: none;">
+                    Elapsed: <span id="stepProcessingTimerValue">00:00</span>
+                </div>
+            </div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <h3 class="step-title">View Review</h3>
+                <p class="step-description">Get comprehensive feedback.</p>
+            </div>
+        </div>
+
+        <div class="main-grid">
+            <section class="card upload-card">
+                <h2 class="card-title">Submit your paper</h2>
+                <p class="card-subtitle">Max 10MB PDF.</p>
+                
+                <form id="uploadForm" class="upload-form">
+                    <div class="form-group">
+                        <label for="paperFile" class="form-label">Paper PDF <span class="required">*</span></label>
+                        <div class="file-input-wrapper" id="fileInputWrapper">
+                            <input type="file" id="paperFile" name="file" accept=".pdf" class="file-input" required>
+                            <div class="file-input-display" id="fileInputDisplay">
+                                <p class="file-input-text">Click to upload PDF up to 10MB</p>
+                            </div>
+                        </div>
+                        <div id="fileNameDisplay" class="file-name-display"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span id="submitBtnText">Submit for Review</span>
+                        <div class="spinner" id="submitSpinner"></div>
+                    </button>
+                </form>
+
+                <div id="uploadResult" class="result-message"></div>
+            </section>
+
+            <section class="card status-card">
+                <h2 class="card-title">Check review status</h2>
+                
+                <form id="statusForm" class="status-form">
+                    <div class="form-group">
+                        <label for="reviewToken" class="form-label">Review token</label>
+                        <input type="text" id="reviewToken" class="text-input" placeholder="Paste your review token" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary" id="statusBtn">
+                        <span id="statusBtnText">Check status</span>
+                        <div class="spinner" id="statusSpinner"></div>
+                    </button>
+                </form>
+
+                <div id="statusResult" class="status-result"></div>
+            </section>
+        </div>
+
+        <section class="review-section" id="reviewSection" style="display: none;">
+            <div id="reviewContent"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
