@@ -42,6 +42,11 @@ The system operates as a coordinated team of specialized agents, orchestrated by
     *   Writes a structured review analyzing Novelty, Methodology, and Correctness.
 7.  **Output**: The final JSON result is displayed on the frontend.
 
+### Reviewer Agent Architecture
+The following diagram shows the detailed internal architecture of the Reviewer Agent and its interaction with other system components:
+
+![Reviewer Agent Architecture](assets/reviewer_architecture.png)
+
 ---
 
 ## � Installation
