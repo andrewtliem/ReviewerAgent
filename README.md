@@ -45,7 +45,7 @@ The system operates as a coordinated team of specialized agents, orchestrated by
 ### Reviewer Agent Architecture
 The following diagram shows the detailed internal architecture of the Reviewer Agent and its interaction with other system components:
 
-<img src="assets/reviewer_architecture.png" alt="Reviewer Agent Architecture" width="100%"/>
+<img src="assets/Screenshot 2025-11-29 at 23.10.55.png" alt="Reviewer Agent Architecture" width="100%"/>
 
 ---
 
