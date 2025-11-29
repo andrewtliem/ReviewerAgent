@@ -57,3 +57,14 @@ logs/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Development Documentation & Logs (Excluded from Repo)
+COMPLETE_LOG_EXAMPLE.md
+FULL_CONTENT_REVIEW.md
+LOGGING_GUIDE.md
+MAXIMUM_LOGGING.md
+PROJECT_SUMMARY.md
+REAL_LLM_FIX.md
+ULTRA_LOGGING_SUMMARY.md
+UNIQUE_REVIEWS_FIX.md
+WALKTHROUGH.md
